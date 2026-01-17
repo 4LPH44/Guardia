@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Crise Cyber : Les Fondamentaux</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Montserrat:wght@600;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      /* Base Document Settings per instructions */
+      body {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 32px 80px;
+        position: relative;
+        box-sizing: border-box;
+        background-color: white;
+        font-family: 'Roboto', sans-serif;
+        color: #334155;
+        line-height: 1.5;
+        font-size: 11pt;
+      }
+
+      /* Typography & Headings */
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: 'Montserrat', sans-serif;
+        color: #0f172a; /* Dark Blue Cyber */
+        margin-top: 1.5em;
+        margin-bottom: 0.5em;
+      }
+
+      h1 {
+        font-size: 24pt;
+        text-transform: uppercase;
+        border-bottom: 3px solid #dc2626; /* Cyber Red */
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+
+      h2 {
+        font-size: 16pt;
+        border-left: 5px solid #0f172a;
+        padding-left: 10px;
+        background-color: #f8fafc;
+      }
+
+      h3 {
+        font-size: 13pt;
+        color: #1e293b;
+        font-weight: 700;
+      }
+
+      h4 {
+        font-size: 11pt;
+        color: #475569;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Essential Requirement: Page Break Avoidance */
+      p,
+      li,
+      h1,
+      h2,
+      h3,
+      h4,
+      .box,
+      .timeline-item,
+      tr,
+      td,
+      th,
+      section,
+      blockquote {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      /* Lists */
+      ul,
+      ol {
+        margin-bottom: 1em;
+      }
+      li {
+        margin-bottom: 0.3em;
+      }
+
+      /* Custom Components for "Cyber" feel in a print doc */
+      .header-meta {
+        font-size: 10pt;
+        color: #64748b;
+        margin-bottom: 2em;
+        font-style: italic;
+      }
+
+      .box {
+        border: 1px solid #e2e8f0;
+        padding: 15px;
+        margin-bottom: 1.5em;
+        border-radius: 0;
+        background-color: #f8fafc;
+      }
+
+      .box-alert {
+        border-left: 4px solid #dc2626;
+        background-color: #fef2f2;
+      }
+
+      .box-info {
+        border-left: 4px solid #0ea5e9; /* Light Blue */
+        background-color: #f0f9ff;
+      }
+
+      .timeline-item {
+        display: flex;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+
+      .timeline-time {
+        font-weight: bold;
+        color: #dc2626;
+        width: 80px;
+        flex-shrink: 0;
+      }
+
+      .glossary-term {
+        font-weight: bold;
+        color: #0f172a;
+        display: block;
+        margin-top: 10px;
+      }
+
+      /* Table of Contents */
+      .toc {
+        background-color: #f1f5f9;
+        padding: 20px;
+        margin-bottom: 30px;
+        border: 1px solid #cbd5e1;
+      }
+      .toc h3 {
+        margin-top: 0;
+        font-size: 12pt;
+      }
+      .toc ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+      .toc li {
+        margin-bottom: 5px;
+      }
+      .toc a {
+        text-decoration: none;
+        color: #334155;
+        font-weight: 500;
+      }
+      .toc a:hover {
+        color: #dc2626;
+      }
+
+      /* Icons styling */
+      .icon-header {
+        margin-right: 8px;
+        color: #dc2626;
+      }
+
+      /* Footer */
+      .footer {
+        margin-top: 50px;
+        border-top: 1px solid #cbd5e1;
+        padding-top: 20px;
+        font-size: 9pt;
+        text-align: center;
+        color: #94a3b8;
+      }
+
+      /* Reset Pico specific styles that might interfere with print look */
+      :root {
+        --spacing: 0;
+        --typography-spacing-vertical: 0.5rem;
+      }
+    </style>
+  </head>
+  <body style="">
+    <!-- Header -->
+    <header>
+      <h1><i class="fa-solid fa-shield-halved icon-header"></i> Gestion de Crise Cyber : Les Fondamentaux</h1>
+      <div class="header-meta">
+        Document réalisé à l'occasion des portes ouvertes de Guardia Cybersecurity School par Noa Broca et Lucas Barozzi<br>
+        Synthèse de l'atelier
+      </div>
+    </header>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+      <h3><i class="fa-solid fa-list"></i> Sommaire</h3>
+      <ul>
+        <li><a href="#exercice">1. L'exercice NeoLink</a></li>
+        <li><a href="#reflexes">2. Les 6 Réflexes Essentiels</a></li>
+        <li><a href="#acteurs">3. Les Acteurs à Connaître</a></li>
+        <li><a href="#glossaire">4. Glossaire</a></li>
+        <li><a href="#ressources">5. Pour aller plus loin</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 1: NeoLink Exercise -->
+    <section id="exercice">
+      <h2><i class="fa-solid fa-bolt icon-header"></i> L'exercice que vous venez de vivre</h2>
+
+      <div class="box box-info">
+        <h3>NeoLink : une startup face à la tempête</h3>
+        <p>
+          Vous venez d'incarner les dirigeants de NeoLink, une startup lyonnaise de 45 employés spécialisée dans les
+          assistants IA conversationnels. Après une levée de fonds de 3 millions d'euros et l'acquisition de clients
+          prestigieux (banques, enseignes retail), l'avenir semblait radieux.
+          <strong>Jusqu'à ce mardi matin, 9h15.</strong>
+        </p>
+      </div>
+
+      <h3>Chronologie de la crise</h3>
+
+      <div class="timeline-item">
+        <div class="timeline-time">9h15</div>
+        <div>
+          <strong>Découverte de l'attaque</strong><br>
+          Les premiers écrans affichent un message de rançon. Les fichiers sont inaccessibles. Le mot tombe :
+          ransomware.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">9h30</div>
+        <div>
+          <strong>L'ampleur se révèle</strong><br>
+          70% des serveurs sont touchés. L'attaque s'est propagée via un simple email de phishing ouvert la veille. Les
+          badges d'accès, la machine à café connectée... tout le réseau est compromis.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">10h00</div>
+        <div>
+          <strong>La pression monte</strong><br>
+          Les clients appellent : leurs chatbots ne fonctionnent plus. Twitter s'agite. Un journaliste demande des
+          comptes. Les attaquants réclament 500 000€ en Bitcoin sous 48h, menaçant de publier 50 Go de données volées.
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-time">10h30</div>
+        <div>
+          <strong>Décisions cruciales</strong><br>
+          Faut-il payer ? Quand communiquer ? Comment préserver les preuves tout en relançant l'activité ? Les
+          obligations légales s'accumulent : CNIL, dépôt de plainte, information des clients...
+        </div>
+      </div>
+
+      <p>
+        <em>Ce que vous avez vécu en 30 minutes aurait duré plusieurs semaines dans la réalité. Les crises cyber sont des
+          marathons, pas des sprints.</em>
+      </p>
+    </section>
+
+    <!-- Section 2: Les 6 Réflexes -->
+    <section id="reflexes">
+      <h2><i class="fa-solid fa-check-double icon-header"></i> Les 6 Réflexes Essentiels</h2>
+
+      <!-- Reflexe 1 -->
+      <article>
+        <h3>1. Ne jamais payer la rançon</h3>
+        <div class="box box-alert">
+          <p>
+            <strong>C'est probablement la règle la plus importante et pourtant la plus difficile à appliquer sous
+              pression.</strong>
+          </p>
+        </div>
+        <h4>Pourquoi ne pas payer ?</h4>
+        <ul>
+          <li>
+            <strong>Aucune garantie :</strong> Rien ne prouve que les attaquants vous rendront vos données ou qu'ils ne
+            les publieront pas. Certaines victimes n'ont jamais reçu la clé.
+          </li>
+          <li>
+            <strong>Vous devenez une cible privilégiée :</strong> Une entreprise qui paie est identifiée comme "bon
+            payeur" et sera ciblée à nouveau.
+          </li>
+          <li>
+            <strong>Vous financez le crime organisé :</strong> L'argent finance les infrastructures criminelles et
+            parfois le terrorisme.
+          </li>
+          <li>
+            <strong>Potentiellement illégal :</strong> Peut être qualifié de financement du terrorisme selon l'origine
+            des attaquants.
+          </li>
+        </ul>
+        <p>
+          <strong>Que faire à la place ?</strong> Concentrez vos ressources sur la restauration à partir de sauvegardes
+          saines, le renforcement de la sécurité et la reconstruction.
+        </p>
+      </article>
+
+      <!-- Reflexe 2 -->
+      <article>
+        <h3>2. Préserver les preuves</h3>
+        <p>Dans l'urgence, le réflexe naturel est d'éteindre les machines. C'est une erreur qui peut coûter cher.</p>
+        <h4>Pourquoi préserver les preuves ?</h4>
+        <ul>
+          <li>Pour comprendre l'attaque (analyse forensique).</li>
+          <li>Pour éviter une nouvelle attaque (comprendre la faille d'entrée).</li>
+          <li>Pour l'enquête judiciaire (identifier les criminels).</li>
+          <li>Pour l'assurance (exigence technique).</li>
+        </ul>
+        <h4>Les bons réflexes :</h4>
+        <ul>
+          <li>Ne pas éteindre brutalement les machines (préférer la mise en veille).</li>
+          <li>Isoler les machines du réseau sans les éteindre.</li>
+          <li>Faire appel à des experts forensiques avant toute restauration.</li>
+          <li>Documenter chaque action réalisée (qui, quoi, quand).</li>
+        </ul>
+      </article>
+
+      <!-- Reflexe 3 -->
+      <article>
+        <h3>3. Communiquer rapidement et honnêtement</h3>
+        <p>Le silence est votre pire ennemi. Dans le vide d'information, les rumeurs s'installent.</p>
+
+        <h4>Communication interne</h4>
+        <p>
+          Vos collaborateurs doivent savoir ce qui se passe, ce qu'ils doivent faire, qui contacter, et que la situation
+          est prise en charge. Un collaborateur mal informé peut aggraver la situation.
+        </p>
+
+        <h4>Communication externe</h4>
+        <ul>
+          <li><strong>Clients :</strong> Informez-les rapidement. La transparence préserve la confiance.</li>
+          <li>
+            <strong>Médias :</strong> Désignez un porte-parole unique. Ne dites que ce que vous savez avec certitude.
+          </li>
+          <li><strong>Réseaux sociaux :</strong> Surveillez et répondez de manière factuelle.</li>
+        </ul>
+        <div class="box box-info">
+          <strong>Le bon message :</strong> Reconnaît la situation sans dramatiser, montre que vous agissez, annonce les
+          prochaines étapes, indique comment obtenir plus d'informations.
+        </div>
+      </article>
+
+      <!-- Reflexe 4 -->
+      <article>
+        <h3>4. Respecter les obligations légales</h3>
+
+        <h4>Notification à la CNIL (sous 72 heures)</h4>
+        <p>
+          Si des données personnelles ont été compromises, vous devez notifier la CNIL. Cette notification décrit la
+          nature de la violation, les données concernées, le nombre de personnes touchées, les conséquences et les
+          mesures prises.
+        </p>
+
+        <h4>Information des personnes concernées</h4>
+        <p>Si la violation présente un risque élevé pour les droits et libertés des personnes.</p>
+
+        <h4>Dépôt de plainte</h4>
+        <p>
+          Essentiel pour déclencher une enquête et pour l'assurance. Vous pouvez déposer plainte auprès de la police, de
+          la gendarmerie ou du procureur.
+        </p>
+      </article>
+
+      <!-- Reflexe 5 -->
+      <article>
+        <h3>5. Prendre soin des équipes</h3>
+        <p>Une crise cyber est épuisante et peut durer des mois. Les équipes techniques sont en première ligne.</p>
+        <ul>
+          <li>
+            <strong>Pas de chasse aux sorcières :</strong> Les attaquants sont les seuls responsables. La
+            culpabilisation est contre-productive.
+          </li>
+          <li>
+            <strong>Organiser la durée :</strong> Rotations obligatoires, temps de pause, logistique (repas,
+            hébergement).
+          </li>
+          <li><strong>Soutien psychologique :</strong> Proposer un accompagnement face au traumatisme de l'attaque.</li>
+        </ul>
+      </article>
+
+      <!-- Reflexe 6 -->
+      <article>
+        <h3>6. Anticiper et se préparer</h3>
+        <p>La meilleure gestion de crise est celle qui a été préparée.</p>
+        <ul>
+          <li><strong>Les sauvegardes :</strong> Régulières, déconnectées (hors ligne) et testées.</li>
+          <li>
+            <strong>Le PCA (Plan de Continuité d'Activité) :</strong> Comment fonctionner sans outils numériques ?
+          </li>
+          <li>
+            <strong>Les exercices de crise :</strong> Comme celui d'aujourd'hui, pour créer des réflexes et réduire le
+            stress.
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Section 3: Acteurs -->
+    <section id="acteurs">
+      <h2><i class="fa-solid fa-users icon-header"></i> Les Acteurs à Connaître</h2>
+
+      <div class="box">
+        <h4>ANSSI — Agence Nationale de la Sécurité des Systèmes d'Information</h4>
+        <p>
+          Autorité nationale. Accompagne les victimes (OIV) et publie des guides.<br>
+          <a href="https://www.ssi.gouv.fr">www.ssi.gouv.fr</a>
+        </p>
+      </div>
+
+      <div class="box">
+        <h4>CNIL — Commission Nationale de l'Informatique et des Libertés</h4>
+        <p>
+          Autorité de protection des données. Destinataire des notifications de violation.<br>
+          <a href="https://www.cnil.fr">www.cnil.fr</a>
+        </p>
+      </div>
+
+      <div class="box">
+        <h4>Cybermalveillance.gouv.fr</h4>
+        <p>
+          Assistance aux victimes (particuliers, PME). Diagnostic en ligne et mise en relation avec prestataires.<br>
+          <a href="https://www.cybermalveillance.gouv.fr">www.cybermalveillance.gouv.fr</a>
+        </p>
+      </div>
+
+      <div class="box">
+        <h4>Police et Gendarmerie</h4>
+        <p>Unités spécialisées : OCLCTIC (Police) et C3N (Gendarmerie). Dépôt de plainte en commissariat ou brigade.</p>
+      </div>
+    </section>
+
+    <!-- Section 4: Glossaire -->
+    <section id="glossaire">
+      <h2><i class="fa-solid fa-book icon-header"></i> Glossaire</h2>
+
+      <span class="glossary-term">Ransomware (Rançongiciel)</span>
+      Logiciel malveillant qui chiffre les fichiers d'une victime et exige une rançon.
+
+      <span class="glossary-term">Phishing (Hameçonnage)</span>
+      Usurpation d'identité pour inciter la victime à révéler des infos ou cliquer sur un lien.
+
+      <span class="glossary-term">Forensic (Analyse forensique)</span>
+      Investigation numérique pour collecter les preuves et comprendre l'attaque.
+
+      <span class="glossary-term">RSSI</span>
+      Responsable de la Sécurité des Systèmes d'Information.
+
+      <span class="glossary-term">Cellule de crise</span>
+      Structure temporaire réunissant décideurs et experts pour gérer une situation exceptionnelle.
+
+      <span class="glossary-term">Main courante</span>
+      Document chronologique consignant tous les événements et actions pendant la crise.
+
+      <span class="glossary-term">PCA (Plan de Continuité d'Activité)</span>
+      Procédures pour maintenir les activités essentielles en mode dégradé.
+
+      <span class="glossary-term">PRA (Plan de Reprise d'Activité)</span>
+      Procédures pour reconstruire le SI et reprendre une activité normale.
+
+      <span class="glossary-term">Exfiltration de données</span>
+      Vol de données vers l'extérieur, souvent utilisé pour le chantage.
+
+      <span class="glossary-term">RGPD</span>
+      Règlement européen imposant notamment la notification des violations de données.
+    </section>
+
+    <!-- Section 5: Pour aller plus loin -->
+    <section id="ressources">
+      <h2><i class="fa-solid fa-graduation-cap icon-header"></i> Pour aller plus loin</h2>
+
+      <h3>Guides et ressources recommandés</h3>
+      <ul>
+        <li>
+          <strong>ANSSI :</strong> "Attaques par rançongiciels, tous concernés", "Guide d'hygiène informatique",
+          "Organiser un exercice de gestion de crise cyber".
+        </li>
+        <li><strong>Cybermalveillance.gouv.fr :</strong> Fiches réflexes, kits de sensibilisation.</li>
+      </ul>
+
+      <h3>Se former à la cybersécurité</h3>
+      <p>Le secteur recrute massivement (Analyste SOC, Pentester, Consultant, RSSI, Expert forensic, etc.).</p>
+    </section>
+
+    <footer class="footer">
+      <p>
+        Merci d'avoir participé à cet exercice de gestion de crise cyber.<br>
+        <strong>La cybersécurité est l'affaire de tous. Chaque geste compte.</strong>
+      </p>
+    </footer>
+  
+
+</body></html>
